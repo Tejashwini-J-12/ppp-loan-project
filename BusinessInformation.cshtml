@@ -1,0 +1,158 @@
+﻿@model PPP_Loan.Models.BusinessInfoViewModel
+
+    <div class="panel panel-primary setup-content" id="step-2">
+        <div class="panel-heading">
+            <h1 class="panel-title">Tell us about your business</h1>
+
+        </div>
+
+        <div class="panel-body">
+            <div class="form-group">
+                @Html.LabelFor(model => model.businessInfo.BusinessName)
+                @Html.TextBoxFor(model => model.businessInfo.BusinessName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.businessInfo.BusinessName, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.businessInfo.AnnualRevenue)
+                @Html.TextBoxFor(model => model.businessInfo.AnnualRevenue, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.businessInfo.AnnualRevenue, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.businessInfo.TIN)
+                @Html.TextBoxFor(model => model.businessInfo.TIN, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.businessInfo.TIN, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.businessInfo.IndustryType)
+                @Html.TextBoxFor(model => model.businessInfo.IndustryType, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.businessInfo.IndustryType, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.businessInfo.NoOfEmp)
+                @Html.TextBoxFor(model => model.businessInfo.NoOfEmp, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.businessInfo.NoOfEmp, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.businessInfo.BusinessEntity)
+                @Html.TextBoxFor(model => model.businessInfo.BusinessEntity, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.businessInfo.BusinessEntity, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.address.Street)
+                @Html.TextBoxFor(model => model.address.Street, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.address.Street, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.address.City)
+                @Html.TextBoxFor(model => model.address.City, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.address.City, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.address.State)
+                @Html.TextBoxFor(model => model.address.State, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.address.State, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.address.zipcode)
+                @Html.TextBoxFor(model => model.address.zipcode, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.address.zipcode, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.businessInfo.BusinessDBA)
+                @Html.TextBoxFor(model => model.businessInfo.BusinessDBA, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.businessInfo.BusinessDBA, "", new { @class = "text-danger" })
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.businessInfo.NAICS)
+                @Html.TextBoxFor(model => model.businessInfo.NAICS, new { @class = "form-control form-control-lg" })
+                @Html.ValidationMessageFor(model => model.businessInfo.NAICS, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label for="q1">Has Small Business Applicant ever received financing from the Federal Government defaulted on said financing causing a loss to federal Government?</label>
+
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-outline-primary active">
+                        <input type="checkbox" checked autocomplete="off">Yes
+                    </label>
+                    <label class="btn btn-outline-primary active">
+                        <input type="checkbox" checked autocomplete="off">No
+                    </label>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="q2">Is the Business Applicant permanently suspended, debarred, declared ineligible or voluntarily excluded from participation in this transaction by any Federal department or agency? </label>
+
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-outline-primary active">
+                        <input type="checkbox" checked autocomplete="off">Yes
+                    </label>
+                    <label class="btn btn-outline-primary active">
+                        <input type="checkbox" checked autocomplete="off">No
+                    </label>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="q3">Is any sole proprietor,officer, director or stockholder with 10% or more interest, or household member or applicant a Government employee with a grade of G5-13 or higher? </label>
+
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-outline-primary active">
+                        <input type="checkbox" checked autocomplete="off">Yes
+                    </label>
+                    <label class="btn btn-outline-primary active">
+                        <input type="checkbox" checked autocomplete="off">No
+                    </label>
+
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="q4">Has Small Business Applicant incurred any SBA disaster relief financing from January 31st 2020 through March 29th 2020?</label>
+
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-outline-primary active">
+                        <input type="checkbox" checked autocomplete="off">Yes
+                    </label>
+                    <label class="btn btn-outline-primary active">
+                        <input type="checkbox" checked autocomplete="off">No
+                    </label>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+
+        </div>
+
+           
+     </div>
+    

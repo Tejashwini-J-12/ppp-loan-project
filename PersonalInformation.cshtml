@@ -1,0 +1,51 @@
+﻿@model PPP_Loan.Models.PersonalInfoViewModel
+
+    <div class="panel panel-primary setup-content" id="step-3">
+        <div class="panel-heading">
+            <h3 class="panel-title">Tell us about yourself</h3>
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                @Html.LabelFor(model => model.personalInfo.Role)
+                @Html.TextBoxFor(model => model.personalInfo.SsnNumber, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.personalInfo.SsnNumber)
+                @Html.TextBoxFor(model => model.personalInfo.SsnNumber, new { @class = "form-control" })
+            </div>
+
+
+            <div class="form-group">
+
+                @Html.LabelFor(model => model.personalInfo.Mobile)
+                @Html.TextBoxFor(model => model.personalInfo.Mobile, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+
+                @Html.LabelFor(model => model.address.Street)
+                @Html.TextBoxFor(model => model.address.Street, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+
+                @Html.LabelFor(model => model.address.City)
+                @Html.TextBoxFor(model => model.address.City, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+
+                @Html.LabelFor(model => model.address.State)
+                @Html.TextBoxFor(model => model.address.State, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+
+                @Html.LabelFor(model => model.address.zipcode)
+                @Html.TextBoxFor(model => model.address.zipcode, new { @class = "form-control" })
+            </div>
+
+            <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
+        </div>
+    </div>

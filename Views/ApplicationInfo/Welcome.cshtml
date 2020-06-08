@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Welcome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Welcome</h2>
+
+<h2 class="welcome-header">Welcome @Session["first_name"]</h2>
+<div>
+    @Html.ActionLink("NEXT", "BusinessView", "BusinessInfo", new { name = @Session["first_name"] }, new { @class = "welcome-links" })
+</div>

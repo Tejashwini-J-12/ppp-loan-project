@@ -1,0 +1,111 @@
+﻿@model PPP_Loan_2.Models.BeneficiaryOwnerModel
+
+    <head>
+        @*<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>*@
+        <link href="@Url.Content("~/Content/application.css")" rel="stylesheet" type="text/css" />
+    </head>
+
+
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    <div class="container">
+      <div class="stepwizard">
+        <div class="stepwizard-row setup-panel">
+            <div class="stepwizard-step col-xs-2">
+                <a href="#step-1" type="button" class="btn btn-default btn-circle" disabled="disabled">1</a>
+                <p><small>APPLICATION</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-2">
+                <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled=" disabled">2</a>
+                <p><small>YOUR BUSINESS</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-2">
+                <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                <p><small>PERSONAL INFO</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-2">
+                <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                <p><small>PAYROLL CALCULATION</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-2">
+                <a href="#step-5" type="button" class="btn btn-success btn-circle" >5</a>
+                <p><small>OTHERS INVOLVED</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-2">
+                <a href="#step-6" type="button" class="btn btn-default btn-circle" disabled="disabled">6</a>
+                <p><small>REVIEW & SUBMIT</small></p>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+     <div class="panel panel-primary setup-content" id="step-3">
+        <div class="panel-heading">
+            <h1 class="panel-title">Beneficial Ownership</h1>
+
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                
+                    @Html.LabelFor(model => model.FirstName)
+                    
+                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                    
+            </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.LastName)
+                    
+                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                    
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.EmailID)
+                    
+                        @Html.EditorFor(model => model.EmailID, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.EmailID, "", new { @class = "text-danger" })
+                    
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MobileNumber)
+                    
+                        @Html.EditorFor(model => model.MobileNumber, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.MobileNumber, "", new { @class = "text-danger" })
+                    
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Role)
+                    
+                        @Html.EditorFor(model => model.Role, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Role, "", new { @class = "text-danger" })
+                    
+                </div>
+
+                <div class="form-group">
+                    <div class="btn-container">
+
+                        <input type="button" class="btn btn-primary pull-right" value="Next" />
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </div>
+        </div>
+     </div>
+
+ }
+
+            
+
+            @section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }

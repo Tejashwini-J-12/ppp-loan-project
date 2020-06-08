@@ -1,0 +1,223 @@
+﻿@model PPP_Loan_2.Viewodel.BusinessViewModel
+
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="@Url.Content("~/Content/application.css")" rel="stylesheet" type="text/css" />
+</head>
+
+
+
+@using (Html.BeginForm())
+ {
+    @Html.AntiForgeryToken()
+
+    <div class="container">
+        <div class="stepwizard">
+            <div class="stepwizard-row setup-panel">
+                <div class="stepwizard-step col-xs-2">
+                    <a href="#step-1" type="button" class="btn btn-default btn-circle" disabled="disabled">1</a>
+                    <p><small>APPLICATION</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-2">
+                    <a href="#step-2" type="button" class="btn btn-success btn-circle">2</a>
+                    <p><small>YOUR BUSINESS</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-2">
+                    <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                    <p><small>PERSONAL INFO</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-2">
+                    <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                    <p><small>PAYROLL CALCULATION</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-2">
+                    <a href="#step-5" type="button" class="btn btn-default btn-circle" disabled="disabled">5</a>
+                    <p><small>OTHERS INVOLVED</small></p>
+                </div>
+                <div class="stepwizard-step col-xs-2">
+                    <a href="#step-6" type="button" class="btn btn-default btn-circle" disabled="disabled">6</a>
+                    <p><small>REVIEW & SUBMIT</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-primary setup-content" id="step-2">
+        <div class="panel-heading">
+            <h1 class="panel-title">Tell us about your business</h1>
+
+        </div>
+        <div class="panel-body">
+            <div class="form-group">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                @Html.LabelFor(model => model.BusinessName)
+
+                @Html.EditorFor(model => model.BusinessName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.BusinessName, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.AnnualRevenue)
+
+                @Html.EditorFor(model => model.AnnualRevenue, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AnnualRevenue, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TIN)
+
+                @Html.EditorFor(model => model.TIN, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TIN, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.IndustryType)
+
+                @Html.EditorFor(model => model.IndustryType, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.IndustryType, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.NoOfEmp)
+
+                @Html.EditorFor(model => model.NoOfEmp, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NoOfEmp, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.BusinessEntity)
+
+                @Html.EditorFor(model => model.BusinessEntity, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.BusinessEntity, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Street)
+
+                @Html.EditorFor(model => model.Street, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Street, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.City)
+
+                @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.State)
+
+                @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.zipcode)
+
+                @Html.EditorFor(model => model.zipcode, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.zipcode, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.BusinessDBA)
+
+                @Html.EditorFor(model => model.BusinessDBA, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.BusinessDBA, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.BusinessDate)
+
+                @Html.EditorFor(model => model.BusinessDate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.BusinessDate, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.NAICS)
+
+                @Html.EditorFor(model => model.NAICS, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NAICS, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.applicant_id)
+
+                @Html.EditorFor(model => model.applicant_id, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.applicant_id, "", new { @class = "text-danger" })
+
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="q1">Has Small Business Applicant ever received financing from the Federal Government defaulted on said financing causing a loss to federal Government?</label>
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <input type="button" class="btn btn-default" value="YES" />
+                    <input type="button" class="btn btn-deafult" value="No" />
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="q2">Is the Business Applicant permanently suspended, debarred, declared ineligible or voluntarily excluded from participation in this transaction by any Federal department or agency? </label>
+
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <input type="button" class="btn btn-default" value="YES" />
+                    <input type="button" class="btn btn-deafult" value="No" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="q3">Is any sole proprietor,officer, director or stockholder with 10% or more interest, or household member or applicant a Government employee with a grade of G5-13 or higher? </label>
+
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <input type="button" class="btn btn-default" value="YES" />
+                    <input type="button" class="btn btn-deafult" value="No" />
+
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="q4">Has Small Business Applicant incurred any SBA disaster relief financing from January 31st 2020 through March 29th 2020?</label>
+
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <input type="button" class="btn btn-default" value="YES" />
+                    <input type="button" class="btn btn-deafult" value="No" />
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="btn-container">
+
+                    <input type="button" class="btn btn-primary pull-right" value="Next" onclick="location.href='@Url.Action("PersonalInfoView", "PersonalInfo")'" />
+                   <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    </div>
+ }
+
+        
+ 
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }

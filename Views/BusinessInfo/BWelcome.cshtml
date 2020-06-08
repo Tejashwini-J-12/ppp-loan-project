@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "BWelcome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Hey</h2>
+<h2 class="welcome-header">Your Business name is  @Session["business_name"]</h2>
+<h3>We want to Know where is your business is located...To give that click NEXT </h3>
+@*<div>
+    @Html.ActionLink("NEXT", "BAddressView", "Business_Address", new { bname = @Session["business_name"] }, new { @class = "welcome-links" })
+</div>*@
+
